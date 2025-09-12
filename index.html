@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1" />
+
+  <title>Portfolio – Iloudia VASSEUR</title>
+
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="./components/Accueil/accueil.css">
+  <script src="./components/Accueil/accueil.js"
+    defer></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+</head>
+
+<body>
+<!-- Navigation -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html">Iloudia VASSEUR<span>.</span> Portfolio</a>
+      </div>
+      <button class="burger"
+        id="burger"
+        aria-label="Ouvrir le menu">☰</button>
+      <nav class="menu"
+        id="menu">
+        <a href="index.html">Accueil</a>
+        <a href="#about">Profil</a>
+        <a href="#projects">Projets</a>
+        <a href="./components/Contact/contact.html" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+<!-- section hero -->
+    <section id="hero">
+      <div class="container hero-wrap">
+        <div class="hero-img">
+          <img src="/src/assets/photo_profil_.webp"
+            alt="Photo de profil de Iloudia VASSEUR" />
+        </div>
+        <div class="hero-txt">
+          <h1>Développeuse web</h1>
+          <p>HTML, CSS, JavaScript et React</p>
+          <div class="cta">
+            <a class="btn-primary"
+              href="https://github.com/Iloudia"
+              target="_blank"
+              rel="noopener">Voir le github</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>Mon profil</h2>
+        <div class="about-grid">
+
+          <!-- A propos -->
+          <div class="card">
+            <h3>À propos de moi</h3>
+            <p>
+              Après une réorientation professionnelle, j’ai découvert une véritable passion pour
+              l’intégration web.
+              J’aime transformer une maquette ou une idée en un site clair, moderne et fonctionnel.
+              <br>
+              Curieuse, rigoureuse et créative, je crée des sites web modernes et sur mesure.
+              Envie de concrétiser votre projet ? Contactez-moi et réalisons-le ensemble !
+            </p>
+          </div>
+
+          <!-- section Compétences -->
+          <div class="card">
+            <h3>Mes compétences</h3>
+            <div class="skills-section">
+
+              <!-- section Frontend -->
+              <h4>Front-end</h4>
+              <div class="tag-icon">
+                <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+                <span class="tag"><i class="devicon-css3-plain colored"></i> CSS</span>
+                <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <span class="tag"><i class="devicon-react-original colored"></i> React</span>
+                <span class="tag"><i class="devicon-sass-original colored"></i> Sass</span>
+              </div>
+
+              <!-- section Backend -->
+              <h4>Back-end et autre</h4>
+              <div class="tag-icon">
+                <span class="tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                <span class="tag"><i class="devicon-git-plain colored"></i> Git</span>
+                <span class="tag"><i class="devicon-github-original colored"></i> GitHub</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Mes projects -->
+    <section id="projects">
+      <div class="container">
+        <h2>Mes Projets</h2>
+        <div class="projects">
+
+          <article class="card project-card"
+            data-project="sophie-bluel">
+            <div class="project-image"
+              style="background-image: url('/src/assets/sophiebluel_.webp')"></div>
+            <div class="project-info">
+              <h3>Sophie bluel-architecte</h3>
+              <p>introduction aux fondamentaux du langage HTML</p>
+            </div>
+          </article>
+
+          <article class="card project-card"
+            data-project="ohmyfood">
+            <div class="project-image"
+              style="background-image: url('/src/assets/Ohmyfood_.webp')"></div>
+            <div class="project-info">
+              <h3>Ohmyfood</h3>
+              <p>L'objectif était de développer un site “mobile first”.</p>
+            </div>
+          </article>
+
+          <article class="card project-card"
+            data-project="nina-carducci">
+            <div class="project-image"
+              style="background-image: url('/src/assets/Ninacarducci_.webp')"></div>
+            <div class="project-info">
+              <h3>Nina Carducci</h3>
+              <p>L'objectif était d'ameliorer le reférencement d'un site</p>
+            </div>
+          </article>
+
+          <article class="card project-card"
+            data-project="kasa">
+            <div class="project-image"
+              style="background-image: url('/src/assets/kasa_.webp')"></div>
+            <div class="project-info">
+              <h3>Kasa</h3>
+              <p>Refonte totale d'un site en JavaScript avec NodeJS côté back-end, et React côté front-end</p>
+            </div>
+          </article>
+
+          <article class="card project-card"
+            data-project="724-events">
+            <div class="project-image"
+              style="background-image: url('/src/assets/724events_.webp')"></div>
+            <div class="project-info">
+              <h3>724 Events</h3>
+              <p>L'objectif consistait à débugger le site d'une agence d'événementiel</p>
+            </div>
+          </article>
+
+          <article class="card project-card"
+            data-project="portfolio">
+            <div class="project-image"
+              style="background-image: url('/src/assets/portfolio_.webp')"></div>
+            <div class="project-info">
+              <h3>Création Portfolio</h3>
+              <p>Intégration de ce site en html/css.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+     <!-- projet popup -->
+  <div id="project-overlay"
+    class="overlay"
+    hidden></div>
+  <div id="project-popup"
+    class="popup"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="popup-title"
+    hidden>
+    <button class="close-btn"
+      aria-label="Fermer">×</button>
+    <img id="popup-image"
+      class="preview-image"
+      src=""
+      alt="Aperçu du projet" />
+    <div class="content-box">
+      <div class="info-side">
+        <h3 id="popup-title"
+          class="title"></h3>
+        <p id="popup-desc"
+          class="description"></p>
+      </div>
+      <div class="skills-side">
+        <h4>Compétences développées</h4>
+        <ul id="popup-skills"
+          class="skills-list"></ul>
+      </div>
+    </div>
+    <div class="action-buttons">
+      <a class="btn btn-primary project-site"
+        href="#"
+        target="_blank"
+        rel="noopener">Voir le site</a>
+      <a class="btn btn-primary github-link"
+        href="#"
+        target="_blank"
+        rel="noopener">Voir le dépôt GitHub</a>
+    </div>
+  </div>
+
+
+  </main>
+<!-- Footer -->
+  <footer>
+    <div class="footer-arc">
+      <h3>Iloudia VASSEUR</h3>
+      <p>Portfolio - Conçu en HTML/CSS/JS</p>
+      <div class="social-icons">
+        <a href="https://github.com/Iloudia"
+          target="_blank"
+          rel="noopener"><i class="devicon-github-plain"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Iloudia VASSEUR. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+ 
+</body>
+
+</html>
