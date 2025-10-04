@@ -10,7 +10,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -182,13 +183,13 @@ header {
 
 /* Footer */
 footer {
-  background: #fff; 
+  background: #fff;
   text-align: center;
   padding: 60px 16px 40px;
   position: relative;
   border-top-left-radius: 50% 20%;
   border-top-right-radius: 50% 20%;
-  box-shadow: 0 -6px 20px rgba(0,0,0,0.05); 
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .footer-arc h3 {
@@ -198,7 +199,7 @@ footer {
 }
 
 .footer-arc p {
-  margin: 0 0 20px;
+  margin: 0 0 52px;
   color: var(--muted);
 }
 
@@ -227,7 +228,7 @@ footer {
 
 /* Responsive */
 @media (max-width: 800px) {
-.burger {
+  .burger {
     display: inline-block;
   }
 

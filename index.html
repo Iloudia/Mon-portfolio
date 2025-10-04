@@ -7,6 +7,8 @@
     content="width=device-width, initial-scale=1" />
 
   <title>Portfolio – Iloudia VASSEUR</title>
+  <meta name="description"
+    content="Portfolio de Iloudia VASSEUR, développeuse web front-end. Découvrez mes projets en HTML, CSS, JavaScript et React : intégration, responsive design et optimisation SEO." />
 
   <link rel="preconnect"
     href="https://fonts.googleapis.com">
@@ -25,7 +27,7 @@
 </head>
 
 <body>
-<!-- Navigation -->
+  <!-- Navigation -->
   <header>
     <div class="container nav">
       <div class="brand">
@@ -39,13 +41,14 @@
         <a href="index.html">Accueil</a>
         <a href="#about">Profil</a>
         <a href="#projects">Projets</a>
-        <a href="./components/Contact/contact.html" class="btn-contact">Contact</a>
+        <a href="./components/Contact/contact.html"
+          class="btn-contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-<!-- section hero -->
+    <!-- section hero -->
     <section id="hero">
       <div class="container hero-wrap">
         <div class="hero-img">
@@ -112,26 +115,47 @@
       </div>
     </section>
 
-<!-- Mes projects -->
+
+
+    <!-- Mes projects -->
     <section id="projects">
       <div class="container">
         <h2>Mes Projets</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active"
+            data-filter="all">Tous</button>
+          <button class="filter-btn"
+            data-filter="html">HTML / CSS</button>
+          <button class="filter-btn"
+            data-filter="react">React</button>
+          <button class="filter-btn"
+            data-filter="js">JavaScript</button>
+          <button class="filter-btn"
+            data-filter="seo">SEO</button>
+        </div>
+
         <div class="projects">
 
           <article class="card project-card"
-            data-project="sophie-bluel">
-            <div class="project-image"
-              style="background-image: url('/src/assets/sophiebluel_.webp')"></div>
+            data-project="sophie-bluel"
+            data-category="js">
+            <img src="/src/assets/sophiebluel_.webp"
+              alt="Projet Sophie Bluel, site d’architecte en JavaScript"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
-              <h3>Sophie bluel-architecte</h3>
-              <p>introduction aux fondamentaux du langage HTML</p>
+              <h3>Sophie Bluel - Architecte</h3>
+              <p>Introduction aux fondamentaux du langage HTML.</p>
             </div>
           </article>
 
           <article class="card project-card"
-            data-project="ohmyfood">
-            <div class="project-image"
-              style="background-image: url('/src/assets/Ohmyfood_.webp')"></div>
+            data-project="ohmyfood"
+            data-category="html">
+            <img src="/src/assets/Ohmyfood_.webp"
+              alt="Projet Ohmyfood, site mobile-first en HTML/CSS"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
               <h3>Ohmyfood</h3>
               <p>L'objectif était de développer un site “mobile first”.</p>
@@ -139,42 +163,54 @@
           </article>
 
           <article class="card project-card"
-            data-project="nina-carducci">
-            <div class="project-image"
-              style="background-image: url('/src/assets/Ninacarducci_.webp')"></div>
+            data-project="nina-carducci"
+            data-category="seo">
+            <img src="/src/assets/Ninacarducci_.webp"
+              alt="Projet Nina Carducci, optimisation SEO et performance du site"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
               <h3>Nina Carducci</h3>
-              <p>L'objectif était d'ameliorer le reférencement d'un site</p>
+              <p>L'objectif était d'améliorer le référencement d'un site.</p>
             </div>
           </article>
 
           <article class="card project-card"
-            data-project="kasa">
-            <div class="project-image"
-              style="background-image: url('/src/assets/kasa_.webp')"></div>
+            data-project="kasa"
+            data-category="react">
+            <img src="/src/assets/kasa_.webp"
+              alt="Projet Kasa, refonte d’un site en React et NodeJS"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
               <h3>Kasa</h3>
-              <p>Refonte totale d'un site en JavaScript avec NodeJS côté back-end, et React côté front-end</p>
+              <p>Refonte totale d'un site en JavaScript avec NodeJS côté back-end et React côté front-end.</p>
             </div>
           </article>
 
           <article class="card project-card"
-            data-project="724-events">
-            <div class="project-image"
-              style="background-image: url('/src/assets/724events_.webp')"></div>
+            data-project="724-events"
+            data-category="react">
+            <img src="/src/assets/724events_.webp"
+              alt="Projet 724 Events, débogage d’un site d’agence événementielle en React"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
               <h3>724 Events</h3>
-              <p>L'objectif consistait à débugger le site d'une agence d'événementiel</p>
+              <p>L'objectif consistait à débugger le site d'une agence d'événementiel.</p>
             </div>
           </article>
 
           <article class="card project-card"
-            data-project="portfolio">
-            <div class="project-image"
-              style="background-image: url('/src/assets/portfolio_.webp')"></div>
+            data-project="portfolio"
+            data-category="html">
+            <img src="/src/assets/portfolio_.webp"
+              alt="Création du portfolio personnel, intégration HTML/CSS"
+              class="project-image"
+              loading="lazy">
             <div class="project-info">
               <h3>Création Portfolio</h3>
-              <p>Intégration de ce site en html/css.</p>
+              <p>Intégration de ce site en HTML/CSS.</p>
             </div>
           </article>
 
@@ -182,50 +218,65 @@
       </div>
     </section>
 
-     <!-- projet popup -->
-  <div id="project-overlay"
-    class="overlay"
-    hidden></div>
-  <div id="project-popup"
-    class="popup"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="popup-title"
-    hidden>
-    <button class="close-btn"
-      aria-label="Fermer">×</button>
-    <img id="popup-image"
-      class="preview-image"
-      src=""
-      alt="Aperçu du projet" />
-    <div class="content-box">
-      <div class="info-side">
-        <h3 id="popup-title"
-          class="title"></h3>
-        <p id="popup-desc"
-          class="description"></p>
+    <!-- projet popup -->
+    <div id="project-overlay"
+      class="overlay"
+      hidden></div>
+    <div id="project-popup"
+      class="popup"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+      hidden>
+      <button class="close-btn"
+        aria-label="Fermer">×</button>
+      <img id="popup-image"
+        class="preview-image"
+        src=""
+        alt="Aperçu du projet" />
+      <div class="content-box">
+        <div class="info-side">
+          <h3 id="popup-title"
+            class="title">Titre du projet</h3>
+          <p id="popup-desc"
+            class="description"></p>
+        </div>
+        <div class="skills-side">
+          <h4>Compétences développées</h4>
+          <ul id="popup-skills"
+            class="skills-list"></ul>
+        </div>
       </div>
-      <div class="skills-side">
-        <h4>Compétences développées</h4>
-        <ul id="popup-skills"
-          class="skills-list"></ul>
+      <div class="action-buttons">
+        <a class="btn btn-primary project-site"
+          href="#"
+          target="_blank"
+          rel="noopener">Voir le site</a>
+        <a class="btn btn-primary github-link"
+          href="#"
+          target="_blank"
+          rel="noopener">Voir le dépôt GitHub</a>
       </div>
     </div>
-    <div class="action-buttons">
-      <a class="btn btn-primary project-site"
-        href="#"
-        target="_blank"
-        rel="noopener">Voir le site</a>
-      <a class="btn btn-primary github-link"
-        href="#"
-        target="_blank"
-        rel="noopener">Voir le dépôt GitHub</a>
-    </div>
-  </div>
 
+    <!-- Approche et ambitions -->
+    <section id="approach">
+      <div class="container">
+        <h2>Mon approche & ambitions</h2>
+        <div class="approach-card">
+          <p>
+            Je privilégie une <strong>approche design-driven et itérative</strong>, avec rigueur et curiosité, pour
+            créer des interfaces
+            <strong>élégantes, intuitives et fonctionnelles</strong>. Je travaille en freelance, et accompagne mes
+            clients dans la réalisation de leurs projets web sur mesure.
+          </p>
+
+        </div>
+      </div>
+    </section>
 
   </main>
-<!-- Footer -->
+  <!-- Footer -->
   <footer>
     <div class="footer-arc">
       <h3>Iloudia VASSEUR</h3>
@@ -240,7 +291,7 @@
       </div>
     </div>
   </footer>
- 
+
 </body>
 
 </html>
