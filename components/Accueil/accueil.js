@@ -3,7 +3,7 @@ const PROJECTS = {
     title: "Sophie Bluel – Architecte",
     github: "https://github.com/Iloudia/Projet6-Sophiebluel",
     site: "https://github.com/Iloudia/Projet6-Sophiebluel.git",
-    image: "../src/assets/sophiebluel2_.webp",
+    image: "assets/sophiebluel2_.webp",
     alt: "Aperçu du projet Sophie Bluel, portfolio d’architecte en JavaScript",
     description: "J’ai développé le portfolio d’une architecte avec une galerie filtrable et un espace administrateur permettant de gérer les travaux via une API",
     skills: [
@@ -18,7 +18,7 @@ const PROJECTS = {
     title: "Ohmyfood",
     github: "https://github.com/Iloudia/Ohmyfood",
     site: "https://iloudia.github.io/Ohmyfood/",
-    image: "../src/assets/Ohmyfood_.webp",
+    image: "assets/Ohmyfood_.webp",
     alt: "Aperçu du projet Ohmyfood, site mobile-first pour menus de restaurants",
     description: "J’ai conçu un site mobile-first qui présente les menus de restaurants, en utilisant Sass pour l’intégration et des animations CSS pour l’interactivité, le tout sans recourir à JavaScript afin de me concentrer sur l'interface utilisateur.",
     skills: [
@@ -33,7 +33,7 @@ const PROJECTS = {
     title: "Nina Carducci – Photographe",
     github: "https://github.com/Iloudia/Nina-Carducci---Photographe",
     site: "https://iloudia.github.io/Nina-Carducci---Photographe/",
-    image: "../src/assets/Ninacarducci2_.webp",
+    image: "assets/Ninacarducci2_.webp",
     alt: "Aperçu du projet Nina Carducci, optimisation SEO d’un site de photographe",
     description: "J’ai travaillé sur l’optimisation d’un site déjà en ligne en améliorant son référencement, ses performances et son accessibilité, notamment grâce à des audits Lighthouse et à l’optimisation des images et des médias.",
     skills: [
@@ -48,7 +48,7 @@ const PROJECTS = {
     title: "Kasa",
     github: "https://github.com/Iloudia/Kasa",
     site: "https://iloudia.github.io/Kasa/",
-    image: "../src/assets/kasa_.webp",
+    image: "assets/kasa_.webp",
     alt: "Aperçu du projet Kasa, refonte d’un site d’annonces en React et Vite",
     description: "J’ai réalisé la refonte du front-end d’un site avec React et Vite, en créant des pages d’annonces, des composants réutilisables, ainsi qu’un système de routage",
     skills: [
@@ -63,7 +63,7 @@ const PROJECTS = {
     title: "724 Events",
     github: "https://github.com/Iloudia/Projet9-724events",
     site: "https://iloudia.github.io/Projet9-724events/",
-    image: "../src/assets/724events_.webp",
+    image: "assets/724events_.webp",
     alt: "Aperçu du projet 724 Events, application React pour agence événementielle",
     description: "J’ai travaillé sur le débogage d’une application React pour une agence événementielle, en identifiant et corrigeant différents bugs tout en suivant un cahier de recette",
     skills: [
@@ -78,7 +78,7 @@ const PROJECTS = {
     title: "Création Portfolio",
     github: "https://github.com/dashboard",
     site: "#",
-    image: "../src/assets/portfolio_.webp",
+    image: "assets/portfolio_.webp",
     alt: "Aperçu du portfolio personnel, site vitrine développé en HTML, CSS et JavaScript",
     description: "J’ai intégré ce site en HTML, CSS et JavaScript, avec des cartes projets, un design responsive et quelques micro-interactions.",
     skills: [
