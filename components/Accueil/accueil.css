@@ -1,9 +1,25 @@
 :root {
   --pink: #ff8fb1;
+  --darkpink: #FF5C8D;
+  --light-pink: #ffe8f0;
+  --border: #f3d9e3;
   --cream: #fff6fa;
-  --ink: #1f1f29;
+  --black: #1f1f29;
   --muted: #6b6b7a;
   --white: #fff;
+}
+
+:root {
+  --font-base: 'Poppins', sans-serif;
+
+  --text-title: 40px;
+  --text-subtitle: 32px;
+  --text-heading: 20px;
+  --text-paragraph: 16px;
+  --text-small: 14px;
+
+  --font-regular: 400;
+  --font-bold: 600;
 }
 
 * {
@@ -14,13 +30,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Poppins, sans-serif;
-  color: var(--ink);
+  font-family: var(--font-base);
+  color: var(--black);
   background: var(--cream);
 }
 
 a {
-  color: var(--ink);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -36,12 +52,17 @@ img {
   padding: 0 16px;
 }
 
+p {
+  font-size: var(--text-paragraph);
+  color: var(--black);
+}
+
 /* Header */
 header {
   position: sticky;
   top: 0;
-  background: linear-gradient(90deg, var(--white), #ffe8f0);
-  border-bottom: 1px solid #f3d9e3;
+  background: linear-gradient(90deg, var(--white), var(--light-pink));
+  border-bottom: 1px solid var(--border);
   z-index: 10;
 }
 
@@ -53,9 +74,10 @@ header {
 }
 
 .brand {
-  font-weight: 700;
+  font-weight: var(--font-bold);
   letter-spacing: .5px;
 }
+
 
 .brand span {
   color: var(--pink);
@@ -73,16 +95,16 @@ header {
 }
 
 .menu a:hover {
-  background: #ffe4ef;
+  background: var(--border);
 }
 
 /* Bouton Contact dans le menu */
 .menu a.btn-contact {
-  background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   padding: 8px 18px;
   border-radius: 25px;
-  font-weight: 600;
+  font-weight: var(--font-bold);
   transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(255, 143, 177, 0.3);
 }
@@ -97,15 +119,15 @@ header {
 .burger {
   display: none;
   background: transparent;
-  border: 1px solid #ffd3e1;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 6px 10px;
-  font-size: 1.5rem;
+  font-size: var(--text-paragraph);
   cursor: pointer;
 }
 
 .burger:hover {
-  background: #ffe4ef;
+  background: var(--light-pink);
 }
 
 
@@ -130,18 +152,13 @@ header {
 
 .hero-txt h1 {
   margin: 0 0 8px;
-  font-size: 32px;
+  font-size: var(--text-title);
   overflow: hidden;
   border-right: .15em solid var(--pink);
   white-space: nowrap;
   animation:
     typing 2s steps(15, end),
     blink-caret 0.75s step-end infinite;
-}
-
-.hero-txt p {
-  margin: 0 0 14px;
-  color: var(--muted);
 }
 
 @keyframes typing {
@@ -170,17 +187,17 @@ header {
   display: inline-block;
   padding: 10px 16px;
   border-radius: 999px;
-  border: 1px solid #ffd3e1;
+  border: 1px solid var(--border);
   background: var(--white);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   border: none;
   padding: 10px 20px;
   border-radius: 25px;
-  font-weight: 600;
+  font-weight: var(--font-bold);
   text-decoration: none;
   display: inline-block;
   transition: transform 0.2s ease, filter 0.2s ease;
@@ -197,13 +214,13 @@ section {
 }
 
 h2 {
-  font-size: 24px;
-  margin: 0 0 18px;
+  font-size: var(--text-subtitle);
+  margin: 0 0 20px;
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #ffe0ec;
+  background: var(--white);
+  border: 1px solid var(--light-pink);
   border-radius: 16px;
   padding: 18px;
   box-shadow: 0 6px 16px rgba(255, 143, 177, .12);
@@ -216,13 +233,17 @@ h2 {
   gap: 18px;
 }
 
+.about-grid h3 {
+  font-size: var(--text-heading);
+  font-weight: var(--font-bold);
+}
 
 .tag {
   padding: 6px 10px;
   border-radius: 999px;
-  background: #ffe9f2;
-  border: 1px solid #ffd3e1;
-  font-size: 14px;
+  background: var(--light-pink);
+  border: 1px solid var(--border);
+  font-size: var(--text-small);
 }
 
 /* Projets */
@@ -266,11 +287,7 @@ h2 {
 
 .project-info h3 {
   margin: 0 0 6px;
-}
-
-.project-info p {
-  font-size: 14px;
-  margin: 0 0 10px;
+  font-size: var(--text-heading);
 }
 
 .project-info .links {
@@ -285,29 +302,32 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .filter-btn {
   padding: 8px 16px;
   border-radius: 25px;
-  border: 1px solid #ffd3e1;
+  border: 1px solid var(--border);
   background: var(--white);
   cursor: pointer;
-  font-weight: 500;
+  font-size: var(--text-paragraph);
+  font-weight: var(--font-regular);
   transition: all 0.25s ease;
 }
 
 .filter-btn:hover {
-  background: #ffe4ef;
+  background: var(--light-pink);
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   border-color: transparent;
   box-shadow: 0 4px 10px rgba(255, 143, 177, 0.3);
+  font-size: var(--text-paragraph);
+  font-weight: var(--font-bold);
 }
 
 
@@ -327,7 +347,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
+  background: var(--white);
   border-radius: 8px;
   padding: 20px;
   max-width: 800px;
@@ -368,33 +388,35 @@ h2 {
 
 .skills-side {
   flex: 1;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid var(--white);
   padding-left: 20px;
 }
 
-.title {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+#project-popup .title {
+  font-size: var(--text-heading);
+  font-weight: var(--font-bold);
+  color: var(--black);
 }
 
 .description {
-  font-size: 1rem;
+  font-size: var(--text-paragraph);
   line-height: 1.5;
   margin-bottom: 0;
 }
 
 .skills-side h4 {
-  font-size: 1.2rem;
+  font-size: var(--text-heading);
   margin-bottom: 10px;
 }
 
 .skills-list {
+  font-size: var(--text-heading);
   list-style: none;
   padding: 0;
 }
 
 .skills-list li {
-  font-size: 1rem;
+  font-size: var(--text-paragraph);
   line-height: 1.6;
   margin-bottom: 5px;
 }
@@ -411,15 +433,15 @@ h2 {
   padding: 12px 20px;
   border-radius: 25px;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: var(--text-paragraph);
+  font-weight: var(--font-bold);
   text-align: center;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .action-buttons .btn-primary {
-  background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   border: none;
   box-shadow: 0 4px 10px rgba(255, 143, 177, 0.3);
 }
@@ -430,7 +452,7 @@ h2 {
 }
 
 .action-buttons .btn-primary.disabled {
-  background: #ccc;
+  background: var(--white);
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
@@ -443,7 +465,7 @@ h2 {
 }
 
 #approach h2 {
-  font-size: 24px;
+  font-size: var(--text-subtitle);
   margin-bottom: 18px;
   text-align: center;
 }
@@ -458,15 +480,10 @@ h2 {
   box-shadow: 0 6px 20px rgba(180, 87, 220, 0.08);
 }
 
-.approach-card p {
-  font-size: 16px;
-  color: var(--ink);
-}
-
 
 /* Footer */
 footer {
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 60px 16px 40px;
   position: relative;
@@ -478,13 +495,8 @@ footer {
 
 .footer-arc h3 {
   margin: 0 0 8px;
-  font-size: 26px;
-  color: var(--ink);
-}
-
-.footer-arc p {
-  margin: 0 0 20px;
-  color: var(--muted);
+  font-size: var(--text-heading);
+  color: var(--black);
 }
 
 .footer-arc .social-icons {
@@ -496,7 +508,7 @@ footer {
 }
 
 .footer-arc .social-icons a {
-  color: var(--ink);
+  color: var(--black);
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -506,7 +518,7 @@ footer {
 }
 
 .footer-bottom {
-  font-size: 14px;
+  font-size: var(--text-paragraph);
   color: var(--muted);
 }
 
@@ -544,8 +556,8 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
-    border: 1px solid #ffd3e1;
+    background: var(--white);
+    border: 1px solid var(--light-pink);
     border-radius: 0 0 8px 8px;
     box-shadow: 0 6px 12px rgba(255, 143, 177, 0.2);
     padding: 12px 16px;
@@ -565,12 +577,12 @@ footer {
   }
 
   .menu a:hover {
-    background: #ffe4ef;
+    background: var(--light-pink);
   }
 
   .menu a.btn-contact {
-    background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-    color: #fff;
+    background: linear-gradient(135deg, var(--pink), var(--darkpink));
+    color: var(--white);
     padding: 10px 18px;
     border-radius: 25px;
     font-weight: 600;

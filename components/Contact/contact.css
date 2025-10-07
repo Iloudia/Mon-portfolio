@@ -1,9 +1,25 @@
 :root {
   --pink: #ff8fb1;
+  --darkpink: #FF5C8D;
+  --light-pink: #ffe8f0;
+  --border: #f3d9e3;
   --cream: #fff6fa;
-  --ink: #1f1f29;
+  --black: #1f1f29;
   --muted: #6b6b7a;
   --white: #fff;
+}
+
+:root {
+  --font-base: 'Poppins', sans-serif;
+
+  --text-title: 40px;
+  --text-subtitle: 32px;
+  --text-heading: 20px;
+  --text-paragraph: 16px;
+  --text-small: 14px;
+
+  --font-regular: 400;
+  --font-bold: 600;
 }
 
 * {
@@ -14,13 +30,13 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
+  font-family: var(--font-base);
+  color: var(--black);
   background: var(--cream);
 }
 
 a {
-  color: var(--ink);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -40,8 +56,8 @@ img {
 header {
   position: sticky;
   top: 0;
-  background: linear-gradient(90deg, var(--white), #ffe8f0);
-  border-bottom: 1px solid #f3d9e3;
+  background: linear-gradient(90deg, var(--white), var(--light-pink));
+  border-bottom: 1px solid var(--border);
   z-index: 10;
 }
 
@@ -53,7 +69,7 @@ header {
 }
 
 .brand {
-  font-weight: 700;
+  font-weight: var(--font-bold);
   letter-spacing: .5px;
 }
 
@@ -73,15 +89,15 @@ header {
 }
 
 .menu a:hover {
-  background: #ffe4ef;
+  background: var(--border);
 }
 
 .menu a.btn-contact {
-  background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   padding: 8px 18px;
   border-radius: 25px;
-  font-weight: 600;
+  font-weight: var(--font-bold);
   transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 12px rgba(255, 143, 177, 0.3);
 }
@@ -95,19 +111,25 @@ header {
 .burger {
   display: none;
   background: transparent;
-  border: 1px solid #ffd3e1;
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 6px 10px;
-  font-size: 1.5rem;
+  font-size: var(--text-paragraph);
   cursor: pointer;
 }
 
 .burger:hover {
-  background: #ffe4ef;
+  background: var(--light-pink);
 }
 
 
 /* Contact */
+h1 {
+  font-size: var(--text-title);
+  margin-bottom: 20px;
+  font-weight: var(--font-bold);
+}
+
 #contact {
   padding: 60px 0;
   display: flex;
@@ -123,11 +145,12 @@ header {
 
 .card {
   background: var(--white);
-  border: 1px solid #ffe0ec;
+  border: 1px solid var(--light-pink);
   border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 6px 16px rgba(255, 143, 177, 0.12);
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(255, 143, 177, .12);
 }
+
 
 .contact-form {
   display: flex;
@@ -142,18 +165,18 @@ header {
 }
 
 .contact-form label {
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--ink);
+  font-weight: var(--font-bold);
+  font-size: var(--text-paragraph);
+  color: var(--black);
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 12px 14px;
-  border: 1px solid #ffd3e1;
+  border: 1px solid var(--light-pink);
   border-radius: 8px;
-  font-size: 14px;
-  font-family: inherit;
+  font-size: var(--text-paragraph);
+  font-family: var(--font-base);
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -166,12 +189,12 @@ header {
 
 .contact-form button.btn.primary {
   padding: 12px 20px;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: var(--text-paragraph);
+  font-weight: var(--font-bold);
   border-radius: 25px;
   border: none;
-  background: linear-gradient(135deg, #ff8fb1, #ff5c8d);
-  color: #fff;
+  background: linear-gradient(135deg, var(--pink), var(--darkpink));
+  color: var(--white);
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
@@ -183,7 +206,7 @@ header {
 
 /* Footer */
 footer {
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 60px 16px 40px;
   position: relative;
@@ -194,13 +217,8 @@ footer {
 
 .footer-arc h3 {
   margin: 0 0 8px;
-  font-size: 26px;
-  color: var(--ink);
-}
-
-.footer-arc p {
-  margin: 0 0 52px;
-  color: var(--muted);
+  font-size: var(--text-heading);
+  color: var(--black);
 }
 
 .footer-arc .social-icons {
@@ -212,7 +230,7 @@ footer {
 }
 
 .footer-arc .social-icons a {
-  color: var(--ink);
+  color: var(--black);
   transition: color 0.3s, transform 0.3s;
 }
 
@@ -222,7 +240,7 @@ footer {
 }
 
 .footer-bottom {
-  font-size: 14px;
+  font-size: var(--text-paragraph);
   color: var(--muted);
 }
 
@@ -239,7 +257,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background: #fff;
+    background: var(--white);
     border: 1px solid #ffd3e1;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 6px 12px rgba(255, 143, 177, 0.2);
@@ -260,12 +278,12 @@ footer {
   }
 
   .menu a:hover {
-    background: #ffe4ef;
+    background: var(--light-pink);
   }
 
   .menu a.btn-contact {
-    background: linear-gradient(135deg, #FF8FB1, #FF5C8D);
-    color: #fff;
+    background: linear-gradient(135deg, var(--pink), var(--darkpink));
+    color: var(--white);
     padding: 10px 18px;
     border-radius: 25px;
     font-weight: 600;

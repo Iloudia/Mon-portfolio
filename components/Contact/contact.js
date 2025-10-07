@@ -6,7 +6,7 @@ burger.addEventListener('click', () => {
   burger.textContent = menu.classList.contains('open') ? '×' : '☰';
 });
 
-// fermer lorsqu'on click en dehors
+// fermer lorsqu'on click en dehors menu burger
 document.addEventListener('click', (e) => {
   if (!menu.contains(e.target) && !burger.contains(e.target) && menu.classList.contains('open')) {
     menu.classList.remove('open');
