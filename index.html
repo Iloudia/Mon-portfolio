@@ -76,14 +76,15 @@
           <!-- A propos -->
           <div class="card">
             <h3>À propos de moi</h3>
-            <p>
-              Après une réorientation professionnelle, j’ai découvert une véritable passion pour
-              l’intégration web.
-              J’aime transformer une maquette ou une idée en un site clair, moderne et fonctionnel.
-              <br>
-              Curieuse, rigoureuse et créative, je crée des sites web modernes et sur mesure.
-              Envie de concrétiser votre projet ? Contactez-moi et réalisons-le ensemble !
-            </p>
+<p>
+  Après une réorientation professionnelle, j’ai découvert une véritable passion pour
+  l’intégration web. Afin de développer mes compétences, j’ai suivi la formation
+  <strong>Intégrateur Web</strong> proposée par <strong>OpenClassrooms</strong>, où j’ai appris à concevoir
+  des sites accessibles, performants et responsives.
+  <br>
+  Curieuse, rigoureuse et créative, je crée des sites web modernes et sur mesure.
+  Envie de concrétiser votre projet ? Contactez-moi et réalisons-le ensemble !
+</p>
           </div>
 
           <!-- section Compétences -->
@@ -230,9 +231,10 @@
       hidden>
       <button class="close-btn"
         aria-label="Fermer">×</button>
+        <!-- image transparente pour éviter l'erreur HTML (w3c) -->
       <img id="popup-image"
         class="preview-image"
-        src=""
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" 
         alt="Aperçu du projet" />
       <div class="content-box">
         <div class="info-side">
@@ -284,7 +286,10 @@
       <div class="social-icons">
         <a href="https://github.com/Iloudia"
           target="_blank"
-          rel="noopener"><i class="devicon-github-plain"></i></a>
+          rel="noopener"
+         aria-label="Profil GitHub de Iloudia VASSEUR">
+          <i class="devicon-github-plain" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="footer-bottom">
         <span>© 2025 Iloudia VASSEUR. Tous droits réservés.</span>
